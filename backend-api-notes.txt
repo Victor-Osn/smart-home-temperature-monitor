@@ -1,0 +1,11 @@
+Backend API Notes
+
+Planned API routes:
+- GET /api/temperature/current
+- GET /api/temperature/history
+- POST /api/temperature/refresh
+
+Purpose of each route:
+- current: return the latest temperature and status
+- history: return recent temperature readings
+- refresh: generate a new simulated reading
