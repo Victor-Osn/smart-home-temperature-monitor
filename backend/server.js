@@ -7,45 +7,47 @@ const PORT = 5000;
 app.use(cors());
 app.use(express.json());
 
-// Simulated temperature readings
+// Store simulated temperature readings in memory
 let temperatureReadings = [22, 24, 26, 28, 30, 21, 19, 25, 27, 23];
 
-// Function to get the latest temperature
+// Return the most recent temperature reading
 const getLatestTemperature = () => {
   return temperatureReadings[temperatureReadings.length - 1];
 };
 
-// Function to get temperature status
+// Classify the temperature into a simple status label
 const getTemperatureStatus = (temp) => {
   if (temp < 18) return 'Cold';
   if (temp <= 27) return 'Normal';
   return 'Hot';
 };
 
-// Root route
+// Simple test route to confirm the backend is running
 app.get('/', (req, res) => {
   res.json({ message: 'Smart Home Temperature Monitor API is running' });
 });
 
-// Get current temperature
+// Return the latest temperature and its status
 app.get('/api/temperature/current', (req, res) => {
   const currentTemp = getLatestTemperature();
+
   res.json({
     temperature: currentTemp,
     status: getTemperatureStatus(currentTemp)
   });
 });
 
-// Get temperature history
+// Return the recent temperature readings
 app.get('/api/temperature/history', (req, res) => {
   res.json({
     readings: temperatureReadings
   });
 });
 
-// Refresh and generate a new simulated reading
+// Generate a new simulated reading and keep only the latest 10 readings
 app.post('/api/temperature/refresh', (req, res) => {
   const newReading = Math.floor(Math.random() * 15) + 16;
+
   temperatureReadings.push(newReading);
 
   if (temperatureReadings.length > 10) {
@@ -60,5 +62,5 @@ app.post('/api/temperature/refresh', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(Server is running on http://localhost:${PORT});
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

@@ -62,3 +62,18 @@ body {
 .refresh-button:hover {
   background-color: #1d4ed8;
 }
+
+.status-cold {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.status-normal {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.status-hot {
+  color: #dc2626;
+  font-weight: bold;
+}
