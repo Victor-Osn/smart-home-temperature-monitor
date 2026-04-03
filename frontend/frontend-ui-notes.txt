@@ -1,0 +1,17 @@
+Frontend UI Notes
+
+Main cards to display:
+- Current Temperature
+- Status
+- Last Updated Time
+
+Status meanings:
+- Cold
+- Normal
+- Hot
+
+Extra section:
+- Recent temperature readings list
+
+Button:
+- Refresh temperature
