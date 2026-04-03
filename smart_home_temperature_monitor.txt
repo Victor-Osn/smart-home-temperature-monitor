@@ -1,0 +1,24 @@
+Project Name: Smart Home Temperature Monitor
+
+Planned Dashboard Sections:
+1. Current Temperature Card
+2. Temperature Status Card
+3. Recent Readings List
+4. Refresh Button
+
+Temperature Status Rules:
+- Below 18°C = Cold
+- 18°C to 27°C = Normal
+- Above 27°C = Hot
+
+Sample Simulated Readings:
+22
+24
+26
+28
+30
+21
+19
+25
+27
+23
