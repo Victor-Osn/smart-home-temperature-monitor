@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+}
+
+.app-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.dashboard-title {
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 30px;
+}
+
+.temperature-card,
+.readings-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.temperature-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.status-text {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #374151;
+}
+
+.readings-list {
+  list-style: none;
+  padding: 0;
+}
+
+.readings-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.refresh-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.refresh-button:hover {
+  background-color: #1d4ed8;
+}
