@@ -1,37 +1,65 @@
 # Smart Home Temperature Monitor
 
-This project is an IoT-style web application for monitoring temperature readings through a simple dashboard.
+A simple full-stack IoT-style web application for monitoring temperature readings through a dashboard.
 
-## Project Goal
+## Project Overview
 
-Build a small full-stack application that simulates smart home temperature monitoring without needing physical hardware at the beginning.
+This project simulates a smart home temperature monitoring system.  
+The frontend displays the current temperature, temperature status, and the latest 5 readings.  
+The backend provides API endpoints that return simulated temperature data and generate new readings.
 
-## Planned Features
+## Features
 
-- Display the current temperature
-- Show temperature status such as Cold, Normal, or Hot
-- Show recent temperature readings
-- Refresh and generate a new simulated reading
-- Connect a frontend dashboard to a backend API
+- View current temperature
+- View temperature status: Cold, Normal, or Hot
+- View latest 5 readings
+- Refresh temperature using the backend API
+- Color-coded status display
+
+## Tech Stack
+
+### Frontend
+- React
+- Vite
+- CSS
+
+### Backend
+- Node.js
+- Express
+- CORS
+
+## API Endpoints
+
+- GET /
+- GET /api/temperature/current
+- GET /api/temperature/history
+- POST /api/temperature/refresh
 
 ## Project Structure
 
-- frontend/ - notes and plans for the React dashboard
-- backend/ - notes and plans for the Express API
-- project-plan.md - overall project plan
-- smart_home_temperature_monitor.txt - general dashboard notes
-- backend-api-notes.txt - planned backend API routes
+- frontend/ - React dashboard
+- backend/ - Express API
+- run-instructions.md - setup and run guide
 
-## Planned Tech Stack
+## How to Run
 
-- React
-- Node.js
-- Express
-- JavaScript
-- HTML
-- CSS
+### Frontend
+1. Open terminal in frontend
+2. Run npm install
+3. Run npm run dev
 
-## Project Status
+### Backend
+1. Open terminal in backend
+2. Run npm install
+3. Run npm start
 
-Planning phase completed.  
-Next step is to build the frontend dashboard and backend API.
+## Current Status
+
+Completed working full-stack project with frontend-backend integration.
+
+## Future Improvements
+
+- Add timestamps for each reading
+- Add loading and error handling
+- Improve mobile responsiveness
+- Deploy the application online
